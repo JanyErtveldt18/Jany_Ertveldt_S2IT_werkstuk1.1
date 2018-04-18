@@ -117,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="1677.5999999999999" y="-102.99850074962519"/>
         </scene>
-        <!--Gesture tab-->
+        <!--Vergrote foto-->
         <scene sceneID="9qo-LN-wbw">
             <objects>
                 <viewController id="mep-XS-fjf" customClass="ImageViewController" customModule="Werkstuk1_Jany_Ertveldt" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +137,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gyH-a6-3Si"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Gesture tab" id="sLR-ln-pDl"/>
+                    <navigationItem key="navigationItem" title="Vergrote foto" id="sLR-ln-pDl"/>
                     <connections>
                         <outlet property="imageGroot" destination="gax-qo-73U" id="BIx-lA-0ih"/>
                     </connections>

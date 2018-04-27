@@ -44,12 +44,14 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         nieuweGPSLongitude = temp?.gpsLongitude
         
         
+        
+       
+        
         let annotation = MKPointAnnotation()
         annotation.title = temp?.naam
         annotation.coordinate = CLLocationCoordinate2D(latitude: nieuweGPSLatitude!, longitude:nieuweGPSLongitude! )
         self.mijnMapview.addAnnotation(annotation)
-        
-        
+        self.mijnMapview.showAnnotations(self.mijnMapview.annotations, animated: true)
         
         
         
@@ -69,15 +71,16 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         let toImageController = segue.destination as! ImageViewController
         toImageController.tempImage = temp!.image
     }
-
-    func mapView(_ mapview: MKMapView, didUpdate userLocation: MKUserLocation){
-
-        let span = MKCoordinateSpanMake(0.01, 0.01)
-
-        let center = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center,span: span)
-        mapview.setRegion(region,animated: true)
-    }
+    
+//    func mapView(_ mapview: MKMapView, didUpdate userLocation: MKUserLocation){
+//
+//        let span = MKCoordinateSpanMake(0.01, 0.01)
+//
+//        let center = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
+//        let region = MKCoordinateRegion(center: center,span: span)
+//        mapview.setRegion(region,animated: true)
+//
+//    }
     
 //    @IBAction func naarVergroteFotoTab(_ sender: UITapGestureRecognizer) {
 //        print("Er is op de image getabt!")
